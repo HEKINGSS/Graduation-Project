@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2546A282-5FF7-5159-07A7-243B86493BC8}</ProjectGuid>
+    <ProjectGuid>{4FCC422A-EE52-4D76-4E93-66D91FF9180C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,6 +61,23 @@
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\DoorScript.cs" />
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\KeyScript.cs" />
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\LightSwitch.cs" />
+     <Compile Include="Assets\UI\Scripts\GameCanvas.cs" />
+     <Compile Include="Assets\UI\Scripts\Mnanger\ConsumeManager.cs" />
+     <Compile Include="Assets\UI\Scripts\Mnanger\DragMove.cs" />
+     <Compile Include="Assets\UI\Scripts\Mnanger\KnapsackManager.cs" />
+     <Compile Include="Assets\UI\Scripts\Mnanger\ShowInfo.cs" />
+     <Compile Include="Assets\UI\Scripts\NormalClass\BaseItem.cs" />
+     <Compile Include="Assets\UI\Scripts\NormalClass\DefendTool.cs" />
+     <Compile Include="Assets\UI\Scripts\NormalClass\HelpTool.cs" />
+     <Compile Include="Assets\UI\Scripts\NormalClass\OutfireTool.cs" />
+     <Compile Include="Assets\UI\Scripts\QuestionManager.cs" />
+     <Compile Include="Assets\UI\Scripts\Scene_02\ChangeAlpha.cs" />
+     <Compile Include="Assets\UI\Scripts\Scene_02\LoadScene.cs" />
+     <Compile Include="Assets\UI\Scripts\Stores\ObjectPool.cs" />
+     <Compile Include="Assets\UI\Scripts\Stores\StoreItems.cs" />
+     <Compile Include="Assets\UI\Scripts\UIScene_01\UIControl.cs" />
+     <Compile Include="Assets\UI\Scripts\ZhaoCha\ItemBtManager.cs" />
+     <Compile Include="Assets\UI\Scripts\ZhaoCha\ZhaoChaManager.cs" />
      <None Include="Assets\Prefabs\fire\Shaders\GlowAdditiveSimple.shader" />
      <None Include="Assets\HQ_ResidentialHouse\Readme.txt" />
  <Reference Include="UnityEngine.UI">
