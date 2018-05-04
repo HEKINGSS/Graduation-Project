@@ -61,7 +61,6 @@
      <Compile Include="Assets\UI\Scripts\QuestionManager.cs" />
      <Compile Include="Assets\UI\Scripts\Scene_02\ChangeAlpha.cs" />
      <Compile Include="Assets\UI\Scripts\Scene_02\LoadScene.cs" />
-     <Compile Include="Assets\UI\Scripts\Scene_03\CursorManager.cs" />
      <Compile Include="Assets\UI\Scripts\Stores\ObjectPool.cs" />
      <Compile Include="Assets\UI\Scripts\Stores\StoreItems.cs" />
      <Compile Include="Assets\UI\Scripts\UIScene_01\UIControl.cs" />
