@@ -48,6 +48,7 @@
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\DoorScript.cs" />
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\KeyScript.cs" />
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\LightSwitch.cs" />
+     <Compile Include="Assets\Scripts\PickUp.cs" />
      <Compile Include="Assets\UI\Scripts\GameCanvas.cs" />
      <Compile Include="Assets\UI\Scripts\Mnanger\ConsumeManager.cs" />
      <Compile Include="Assets\UI\Scripts\Mnanger\DragMove.cs" />

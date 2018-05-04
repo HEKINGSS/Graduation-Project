@@ -41,7 +41,7 @@ public class DragMove : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
     {        
         m_Transform.position = data.position;
         m_CanvasGroup.blocksRaycasts = false;
-        m_Transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        m_Transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
     }
     public void OnEndDrag(PointerEventData data)
     {
@@ -81,7 +81,7 @@ public class DragMove : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
         {
             m_Transform.position = TempTransform.position;
         }
-        m_Transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        m_Transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
         m_CanvasGroup.blocksRaycasts = true;
     }
 }

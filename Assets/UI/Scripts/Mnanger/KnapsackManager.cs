@@ -13,14 +13,13 @@ public class KnapsackManager : MonoBehaviour {
     private ObjectPool m_ObjectPool;
     private StoreItems m_StoreItems;
     public Image imageInfo;
-    public GameObject pickInfo;
     private Vector3 startpos;
 
     private Image itemImage;
     private Text itemNum;
 
     //存储少量数据，<>中的类型可以是任意类型
-    public static Dictionary<int, BaseItem> ItemList;  //Dictionary集合必须导引入System.Collections.Generic命名空间
+    public Dictionary<int, BaseItem> ItemList;  //Dictionary集合必须导引入System.Collections.Generic命名空间
 
     void Awake()
     {
@@ -32,7 +31,7 @@ public class KnapsackManager : MonoBehaviour {
         m_ObjectPool = ObjectPoolParent.GetComponent<ObjectPool>();
         m_StoreItems = ObjectPoolParent.GetComponent<StoreItems>();
         startpos = imageInfo.rectTransform.position;
-        pickInfo.SetActive(false);
+        
 	}
 	
 	void Update () {
@@ -58,17 +57,17 @@ public class KnapsackManager : MonoBehaviour {
                 image.overrideSprite = Resources.Load(ItemList[index].Icon, typeof(Sprite)) as Sprite;
                 text.text = ItemList[index].Name;
                 imageInfo.rectTransform.position = Input.mousePosition +new Vector3(0,0.2f,0);
-                pickInfo.SetActive(true);
+                /*pickInfo.SetActive(true);
                 if (Input.GetMouseButtonDown(0))
                 {
                     Pickup(ItemList[index]);                  
                     Debug.Log("已拾取");
-                }
+                }*/
             }
             else
             {
                 imageInfo.rectTransform.position = startpos;
-                pickInfo.SetActive(false);
+                //pickInfo.SetActive(false);
             }
         }
        
