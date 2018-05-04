@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+
+ * 		Original Code by: NOT_lonely (www.facebook.com/notlonely92)
+ * 		Code Revision by: sluice (www.sluicegaming.com)
+ *
+ */ 
+using System;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
