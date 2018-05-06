@@ -9,7 +9,6 @@ public class GameCanvas : MonoBehaviour {
     public GameObject panel;
     public GameObject player;
     private RigidbodyFirstPersonController rfc;
-    
 	void Start () {
         stPos = Kanpsack.rectTransform.position;
         panel.SetActive(false);

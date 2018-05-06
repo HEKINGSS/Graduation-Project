@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/UI/Scenes/UIScene_01.unity
+- path: Assets/UI/Scenes/Quesion_04.unity
   isLoaded: 1
   isActive: 1
