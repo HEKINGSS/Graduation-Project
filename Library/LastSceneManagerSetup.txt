@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/HQ_ResidentialHouse/DemoScene/DemoScene.unity
-=======
-- path: Assets/UI/Scenes/Quesion_04.unity
->>>>>>> parent of 6f15f6e... 3D应急演练系统 0.1.4
   isLoaded: 1
   isActive: 1
