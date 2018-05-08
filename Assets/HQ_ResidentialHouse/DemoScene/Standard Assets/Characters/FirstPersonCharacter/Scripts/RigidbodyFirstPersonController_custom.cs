@@ -6,10 +6,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (Rigidbody))]
     [RequireComponent(typeof (CapsuleCollider))]
-    public class RigidbodyFirstPersonController_custom : MonoBehaviour
+    public class RigidbodyFirstPersonController : MonoBehaviour
     {
         [Serializable]
-        public class MovementSettings_custom
+        public class MovementSettings
         {
             public float ForwardSpeed = 8.0f;   // Speed when walking forward
             public float BackwardSpeed = 4.0f;  // Speed when walking backwards
@@ -20,6 +20,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
+#if !MOBILE_INPUT
+            private bool m_Running;
+#endif
 
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
@@ -40,25 +43,44 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					//handled last as if strafing and moving forward at the same time forwards speed should take precedence
 					CurrentTargetSpeed = ForwardSpeed;
 				}
+#if !MOBILE_INPUT
+	            if (Input.GetKey(RunKey))
+	            {
+		            CurrentTargetSpeed *= RunMultiplier;
+		            m_Running = true;
+	            }
+	            else
+	            {
+		            m_Running = false;
+	            }
+#endif
             }
 
+#if !MOBILE_INPUT
+            public bool Running
+            {
+                get { return m_Running; }
+            }
+#endif
         }
 
 
         [Serializable]
-        public class AdvancedSettings_custom
+        public class AdvancedSettings
         {
             public float groundCheckDistance = 0.01f; // distance for checking if the controller is grounded ( 0.01f seems to work best for this )
             public float stickToGroundHelperDistance = 0.5f; // stops the character
             public float slowDownRate = 20f; // rate at which the controller comes to a stop when there is no input
             public bool airControl; // can the user control the direction that is being moved in the air
+            [Tooltip("set it to 0.1 or more if you get stuck in wall")]
+            public float shellOffset; //reduce the radius by that ratio to avoid getting stuck in wall (a value of 0.1f is nice)
         }
 
 
         public Camera cam;
-        public MovementSettings_custom movementSettings = new MovementSettings_custom();
-		public MouseLook_custom mouseLook = new MouseLook_custom();
-        public AdvancedSettings_custom advancedSettings = new AdvancedSettings_custom();
+        public MovementSettings movementSettings = new MovementSettings();
+        public MouseLook mouseLook = new MouseLook();
+        public AdvancedSettings advancedSettings = new AdvancedSettings();
 
 
         private Rigidbody m_RigidBody;
@@ -87,7 +109,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             get
             {
+ #if !MOBILE_INPUT
+				return movementSettings.Running;
+#else
 	            return false;
+#endif
             }
         }
 
@@ -171,9 +197,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void StickToGroundHelper()
         {
             RaycastHit hitInfo;
-            if (Physics.SphereCast(transform.position, m_Capsule.radius, Vector3.down, out hitInfo,
+            if (Physics.SphereCast(transform.position, m_Capsule.radius * (1.0f - advancedSettings.shellOffset), Vector3.down, out hitInfo,
                                    ((m_Capsule.height/2f) - m_Capsule.radius) +
-                                   advancedSettings.stickToGroundHelperDistance))
+                                   advancedSettings.stickToGroundHelperDistance, Physics.AllLayers, QueryTriggerInteraction.Ignore))
             {
                 if (Mathf.Abs(Vector3.Angle(hitInfo.normal, Vector3.up)) < 85f)
                 {
@@ -214,14 +240,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-
         /// sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom
         private void GroundCheck()
         {
             m_PreviouslyGrounded = m_IsGrounded;
             RaycastHit hitInfo;
-            if (Physics.SphereCast(transform.position, m_Capsule.radius, Vector3.down, out hitInfo,
-                                   ((m_Capsule.height/2f) - m_Capsule.radius) + advancedSettings.groundCheckDistance))
+            if (Physics.SphereCast(transform.position, m_Capsule.radius * (1.0f - advancedSettings.shellOffset), Vector3.down, out hitInfo,
+                                   ((m_Capsule.height/2f) - m_Capsule.radius) + advancedSettings.groundCheckDistance, Physics.AllLayers, QueryTriggerInteraction.Ignore))
             {
                 m_IsGrounded = true;
                 m_GroundContactNormal = hitInfo.normal;

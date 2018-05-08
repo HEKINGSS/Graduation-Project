@@ -5,7 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 namespace UnityStandardAssets.Characters.FirstPerson
 {
     [Serializable]
-    public class MouseLook_custom
+    public class MouseLook
     {
         public float XSensitivity = 2f;
         public float YSensitivity = 2f;
@@ -14,11 +14,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float MaximumX = 90F;
         public bool smooth;
         public float smoothTime = 5f;
+        public bool lockCursor = true;
 
 
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
-
+        private bool m_cursorIsLocked = true;
 
         public void Init(Transform character, Transform camera)
         {
@@ -50,9 +51,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 character.localRotation = m_CharacterTargetRot;
                 camera.localRotation = m_CameraTargetRot;
             }
-<<<<<<< HEAD:Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/MouseLook.cs
 
-//             UpdateCursorLock();
+            UpdateCursorLock();
         }
 
         public void SetCursorLock(bool value)
@@ -64,7 +64,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.visible = true;
             }
         }
-/*
+
         public void UpdateCursorLock()
         {
             //if the user set "lockCursor" we check & properly lock the cursos
@@ -94,12 +94,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.visible = true;
             }
         }
-*/
-=======
-        }
 
-
->>>>>>> ebc3e4b05edee95ebcda8c8c624745a11668ed55:Assets/HQ_ResidentialHouse/DemoScene/Standard Assets/Characters/FirstPersonCharacter/Scripts/MouseLook_custom.cs
         Quaternion ClampRotationAroundXAxis(Quaternion q)
         {
             q.x /= q.w;
