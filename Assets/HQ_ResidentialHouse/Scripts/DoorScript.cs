@@ -1,10 +1,4 @@
-﻿/*
-
- * 		Original Code by: NOT_lonely (www.facebook.com/notlonely92)
- * 		Code Revision by: sluice (www.sluicegaming.com)
- *
- */ 
-using System;
+﻿using System;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -148,7 +142,7 @@ public class DoorScript : MonoBehaviour {
 			return;
 
 		if(keySystem.LockPrefab == null){
-			Debug.LogWarning(gameObject.name + ": you can set a padlock prefab.");
+//			Debug.LogWarning(gameObject.name + ": you can set a padlock prefab.");
 		}
 		else {
 			LockAnim = keySystem.LockPrefab.GetComponent<Animation> ();

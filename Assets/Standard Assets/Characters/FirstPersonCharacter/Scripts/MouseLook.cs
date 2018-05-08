@@ -52,7 +52,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 camera.localRotation = m_CameraTargetRot;
             }
 
-            UpdateCursorLock();
+//             UpdateCursorLock();
         }
 
         public void SetCursorLock(bool value)
@@ -64,7 +64,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.visible = true;
             }
         }
-
+/*
         public void UpdateCursorLock()
         {
             //if the user set "lockCursor" we check & properly lock the cursos
@@ -94,7 +94,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.visible = true;
             }
         }
-
+*/
         Quaternion ClampRotationAroundXAxis(Quaternion q)
         {
             q.x /= q.w;

@@ -48,7 +48,10 @@
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\DoorScript.cs" />
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\KeyScript.cs" />
      <Compile Include="Assets\HQ_ResidentialHouse\Scripts\LightSwitch.cs" />
+     <Compile Include="Assets\Scripts\CursorManager.cs" />
+     <Compile Include="Assets\Scripts\NPCManager.cs" />
      <Compile Include="Assets\Scripts\PickUp.cs" />
+     <Compile Include="Assets\UI\Scripts\BagInputManager.cs" />
      <Compile Include="Assets\UI\Scripts\GameCanvas.cs" />
      <Compile Include="Assets\UI\Scripts\Mnanger\ConsumeManager.cs" />
      <Compile Include="Assets\UI\Scripts\Mnanger\DragMove.cs" />
@@ -68,6 +71,7 @@
      <Compile Include="Assets\UI\Scripts\ZhaoCha\ZhaoChaManager.cs" />
      <None Include="Assets\Resources\q_content.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Shaders\OutLine.shader" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Prefabs\fire\Shaders\GlowAdditiveSimple.shader" />
