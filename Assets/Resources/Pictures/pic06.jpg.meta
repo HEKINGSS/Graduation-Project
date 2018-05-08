@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e2d347d84b9a0da45836d6700adebe3b
 timeCreated: 1525766680
 licenseType: Pro
+=======
+guid: 535d744b9431ef243a32a83d4b890b9c
+timeCreated: 1522829387
+licenseType: Free
+>>>>>>> parent of 855f29b... 3D应急演练系统 0.1.5
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -30,24 +36,41 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
+<<<<<<< HEAD
     aniso: -1
     mipBias: -1
     wrapMode: -1
   nPOTScale: 1
+=======
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+>>>>>>> parent of 855f29b... 3D应急演练系统 0.1.5
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
+<<<<<<< HEAD
   spriteMode: 0
+=======
+  spriteMode: 1
+>>>>>>> parent of 855f29b... 3D应急演练系统 0.1.5
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+<<<<<<< HEAD
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: -1
+=======
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+>>>>>>> parent of 855f29b... 3D应急演练系统 0.1.5
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2

@@ -79,6 +79,13 @@
      <Compile Include="Assets\UI\Scripts\UIScene_01\UIControl.cs" />
      <Compile Include="Assets\UI\Scripts\ZhaoCha\ItemBtManager.cs" />
      <Compile Include="Assets\UI\Scripts\ZhaoCha\ZhaoChaManager.cs" />
+<<<<<<< HEAD
+=======
+     <None Include="Assets\Resources\q_content.txt" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+>>>>>>> parent of 855f29b... 3D应急演练系统 0.1.5
      <None Include="Assets\Prefabs\fire\Shaders\GlowAdditiveSimple.shader" />
      <None Include="Assets\HQ_ResidentialHouse\Readme.txt" />
  <Reference Include="UnityEngine.UI">

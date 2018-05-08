@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/HQ_ResidentialHouse/DemoScene/DemoScene.unity
+- path: Assets/UI/Scenes/UIScene_01.unity
   isLoaded: 1
   isActive: 1
