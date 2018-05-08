@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/HQ_ResidentialHouse/DemoScene/DemoScene.unity
+=======
+- path: Assets/UI/Scenes/Quesion_04.unity
+>>>>>>> ebc3e4b05edee95ebcda8c8c624745a11668ed55
   isLoaded: 1
   isActive: 1

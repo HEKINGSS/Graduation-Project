@@ -17,7 +17,7 @@ public class PickUp : MonoBehaviour {
 
     void OnTriggerStay (Collider collider) {
 
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "player")
         {
             pickupImg.SetActive(true);
             Debug.Log("请按F拾取");
