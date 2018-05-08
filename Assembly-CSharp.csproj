@@ -79,11 +79,13 @@
      <Compile Include="Assets\UI\Scripts\UIScene_01\UIControl.cs" />
      <Compile Include="Assets\UI\Scripts\ZhaoCha\ItemBtManager.cs" />
      <Compile Include="Assets\UI\Scripts\ZhaoCha\ZhaoChaManager.cs" />
+<<<<<<< HEAD
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+=======
+>>>>>>> parent of 6f15f6e... 3D应急演练系统 0.1.4
      <None Include="Assets\Prefabs\fire\Shaders\GlowAdditiveSimple.shader" />
-     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\HQ_ResidentialHouse\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
