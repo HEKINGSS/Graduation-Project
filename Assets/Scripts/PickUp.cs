@@ -31,14 +31,13 @@ public class PickUp : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.F))
             {
                 m_knapmanager.Pickup(m_knapmanager.ItemList[index]);
-                pickupImg.SetActive(false);
                 Destroy(transform.gameObject);
-                
             }
         }
-    }
+        else
+        {
+            pickupImg.SetActive(false);
+        }
 
-    void OnTriggerExit (Collider collider) {
-        pickupImg.SetActive(false);
     }
 }
